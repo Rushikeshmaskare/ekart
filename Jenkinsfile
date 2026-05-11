@@ -7,7 +7,7 @@ pipeline {
     }
 
     tools {
-        maven 'maven 3'
+        maven 'maven3'
         jdk 'jdk-17'
     }
 
@@ -85,7 +85,7 @@ pipeline {
         stage('EKS and Kubectl configuration'){
             steps{
                 script{
-                    sh 'aws eks update-kubeconfig --region ap-south-1 --name project-cluster'
+                    sh 'aws eks update-kubeconfig --region ap-southeast-2 --name project-cluster'
                 }
             }
         }
